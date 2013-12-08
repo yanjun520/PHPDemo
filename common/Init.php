@@ -50,7 +50,6 @@ class Common_Init {
 		
 		$controller_file = strtoupper($controller[0]) . substr($controller, 1);
 		$controller_class = "Controller_{$controller_file}";
-// 		require_once "{$_SERVER['DOCUMENT_ROOT']}/controller/{$controller_file}.php";
 		$ref = new ReflectionClass($controller_class);
 		$controller_instance = $ref->newInstance();
 		$controller_instance->process($action);
