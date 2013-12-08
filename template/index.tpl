@@ -4,6 +4,6 @@
 <title>Net World</title>
 </head>
 <body>
-<h1>从GET参数中取值：msg={%$info%}</h1>
+<h1>从GET参数中取值：info={%$info%}</h1>
 </body>
 </html>
