@@ -30,7 +30,7 @@ abstract class Lib_Base_Controller {
 		$this->_render->assign($tpl_var);
 	}
 	
-	protected function assignPageData($tpl_var) {
+	protected function assignPage($tpl_var) {
 		unset($tpl_var['errno']);
 		unset($tpl_var['msg']);
 		$this->_render->assign($tpl_var);

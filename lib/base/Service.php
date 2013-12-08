@@ -2,13 +2,11 @@
 
 abstract class Lib_Base_Service {
 	
-	const EXEC_FUNC = 'doExecute';
-	
 	protected $method;
 	protected $get;
 	protected $post;
 	
-	public function execute() {
+	public function process() {
 		$err = array(
 				'errno' => Const_ErrorCode::SUCC,
 				'msg' => Const_ErrorCode::$code[Const_ErrorCode::SUCC],
@@ -19,7 +17,7 @@ abstract class Lib_Base_Service {
 		$this->post = $_POST;
 		
 		try {
-			$func = array($this, self::EXEC_FUNC);
+			$func = array($this, 'execute');
 			$args = func_get_args();
 			$data = call_user_func_array($func, $args);
 		} catch (Exception $e) {
@@ -32,7 +30,7 @@ abstract class Lib_Base_Service {
 		return $this->getResult($data, $err);
 	}
 	
-	abstract protected function doExecute();
+	abstract protected function execute();
 	
 	protected function getResult($data, $err) {
 		if ($this->method === 'post' || (isset($this->get['format']) && $this->get['format'] === 'json')) {

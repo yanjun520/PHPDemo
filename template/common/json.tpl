@@ -1,0 +1,1 @@
+{"status":{"code":"{%$errno%}","msg":"{%$msg%}","data":{%json_encode($json_data)%}}
