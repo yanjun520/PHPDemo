@@ -32,6 +32,13 @@ class Common_Init {
 		$query_str = $_SERVER['REQUEST_URI'];
 		
         // to throw exception when controller or action is absent
+        $filter_char_list = array('#', '?');
+        foreach ($filter_char_list as $filter_char) {
+        	$pos = strpos($query_str, $filter_char);
+        	if ($pos !== false) {
+        		$query_str = substr($query_str, 0, $pos);
+        	}
+        }
         $tmp = explode('/', $query_str);
         if (count($tmp) === 2) {
         	$controller = 'index';
