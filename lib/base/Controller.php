@@ -22,8 +22,6 @@ abstract class Lib_Base_Controller {
 		$this->_display();
 	}
 	
-	abstract protected function doExecute();
-	
 	protected function setTpl($tpl) {
 		$this->_tpl = $tpl;
 	}
