@@ -4,11 +4,6 @@ class Lib_Base_Init {
 	
 	public static function init() {
 		date_default_timezone_set('PRC');
-		self::_importClass();
-	}
-	
-	private static function _importClass() {
-		require_once "smarty/Smarty.class.php";
 	}
 	
 	public static function initSmarty() {
