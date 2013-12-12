@@ -4,14 +4,10 @@ class Lib_Base_Init {
 	
 	public static function init() {
 		date_default_timezone_set('PRC');
-		self::_importClass();
-	}
-	
-	private static function _importClass() {
-		require_once "smarty/Smarty.class.php";
 	}
 	
 	public static function initSmarty() {
+		require_once "smarty/Smarty.class.php";
 		$tpl = new Smarty();
 		$tpl->template_dir = $_SERVER['DOCUMENT_ROOT']."/template/";
 		$tpl->compile_dir = "{$_SERVER['HOME']}/temp/smarty_template_c/";
