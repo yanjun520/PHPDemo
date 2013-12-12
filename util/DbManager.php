@@ -1,6 +1,6 @@
 <?php
 
-class Lib_Util_DbManager {
+class Util_DbManager {
 	
 	private $_db = null;
 	
@@ -14,9 +14,9 @@ class Lib_Util_DbManager {
     const FETCH_OBJ = 3;    // return Bd_DBResult object
 	
 	public static function getDb() {
-		$db_manager = new Lib_Util_DbManager();
+		$db_manager = new Util_DbManager();
 		
-		$db_conf = Lib_Util_Conf::getConf('db');
+		$db_conf = Util_Conf::getConf('db');
 		
 		$db = new mysqli($db_conf['host'], $db_conf['username'], $db_conf['passwd'], $db_conf['dbname'], $db_conf['port']);
 		if ($db->connect_errno != 0) {

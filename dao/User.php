@@ -8,7 +8,7 @@ class Dao_User {
 	private $_table_fields = false;
 	
 	function __construct() {
-		$this->_db = Common_DbManager::getDb();
+		$this->_db = Util_DbManager::getDb();
 		$this->_table_fields = array(
 				'user_id',
 				'user_name',

@@ -1,6 +1,6 @@
 <?php
 
-class Lib_Util_Conf {
+class Util_Conf {
 	
 	const SPLIT_CHAR = ':';
 	
