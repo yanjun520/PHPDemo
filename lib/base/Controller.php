@@ -13,7 +13,7 @@ abstract class Lib_Base_Controller {
 		$this->_render = Common_Init::initSmarty();
 	}
 	
-	public function process($acion){
+	public function execute($acion){
 		$this->method = strtolower($_SERVER['REQUEST_METHOD']);
 		$this->get = $_GET;
 		$this->post = $_POST;

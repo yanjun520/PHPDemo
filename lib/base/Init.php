@@ -9,7 +9,6 @@ class Common_Init {
 	
 	private static function _importClass() {
 		require_once 'Autoload.php';
-		require_once 'DbManager.php';
 		require_once "{$_SERVER['HOME']}/php/phplib/smarty/Smarty.class.php";
 	}
 	
@@ -52,7 +51,7 @@ class Common_Init {
 		$controller_class = "Controller_{$controller_file}";
 		$ref = new ReflectionClass($controller_class);
 		$controller_instance = $ref->newInstance();
-		$controller_instance->process($action);
+		$controller_instance->execute($action);
 	}
 	
 }
