@@ -1,6 +1,6 @@
 <?php
 
-class Common_Init {
+class Lib_Base_Init {
 	
 	public static function init() {
 		date_default_timezone_set('PRC');
@@ -8,8 +8,7 @@ class Common_Init {
 	}
 	
 	private static function _importClass() {
-		require_once 'Autoload.php';
-		require_once "{$_SERVER['HOME']}/php/phplib/smarty/Smarty.class.php";
+		require_once "smarty/Smarty.class.php";
 	}
 	
 	public static function initSmarty() {

@@ -4,8 +4,6 @@ spl_autoload_register(function($class_name) {
 	spl_autoload_register(function($class_name) {
 		$dirs=explode('_',$class_name);
 		$file_name=array_pop($dirs);
-		$file_path=$file_name;
-			
 		$dir_path='';
 		foreach ($dirs as $dir){
 			if($dir){
