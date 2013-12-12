@@ -1,8 +1,8 @@
 <?php
 
-class Service_Db extends Lib_Base_Service {
+class Service_Db {
 
-	protected function process() {
+	protected function query() {
 		$ret = array(
 				'user_list'	=> array(),	
 		);

@@ -12,6 +12,9 @@ class Dao_User {
 		$this->_table_fields = array(
 				'user_id',
 				'user_name',
+				'sex',
+				'email',
+				'create_time',
 		);
 	}
 	
