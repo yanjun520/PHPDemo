@@ -2,7 +2,7 @@
 
 class Service_Db {
 
-	protected function query() {
+	public function query() {
 		$ret = array(
 				'user_list'	=> array(),	
 		);

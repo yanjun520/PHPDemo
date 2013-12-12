@@ -10,6 +10,7 @@ abstract class Lib_Base_Controller {
 	protected $post;
 	
 	function __construct() {
+		$this->render = Lib_Base_Init::initSmarty();
 	}
 	
 	public function execute($acion){

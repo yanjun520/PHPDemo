@@ -4,7 +4,6 @@ class Lib_Base_Init {
 	
 	public static function init() {
 		date_default_timezone_set('PRC');
-		self::initSmarty();
 	}
 	
 	public static function initSmarty() {
